@@ -11,6 +11,7 @@ include("BEssential/oftenuse/header.php");
   loadfromanywhereLocalStorage();
 
 </script>
+
 <div class="container"> 
 <div class="row"> 
 <div class="col-sm-12 col-md-10 col-md-offset-1"> 
@@ -73,11 +74,33 @@ include("BEssential/oftenuse/header.php");
 			</td>
 
 			<td>
-			<a href="checkout.php">
-				<button type="button" class="btn btn-success"> Checkout
-					<span class="glyphicon glyphicon-play"></span> 
-				</button>
-			</a>
+
+<?php
+
+if( (!isset($_SESSION["login_user"])) && (empty($_SESSION["login_user"])) ){
+?>
+
+	<a href="givendata.php">
+		<button type="button" class="btn btn-success"> Checkout
+			<span class="glyphicon glyphicon-play"></span> 
+		</button>
+	</a>
+
+<?php
+}else{
+?>
+
+	<a href="checkout.php">
+		<button type="button" class="btn btn-success"> Checkout
+			<span class="glyphicon glyphicon-play"></span> 
+		</button>
+	</a>
+
+<?php
+}
+
+?>
+
 			</td> 
 		</tr> 
 		

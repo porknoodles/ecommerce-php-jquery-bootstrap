@@ -7,7 +7,7 @@ $_POST['passTxt'] = "So is your password, of course!";
 $userTxt = $_POST['userTxt'];
 $passTxt = $_POST['passTxt'];
 
-if((!isset($_SESSION["login_user"])) && (empty($_SESSION["login_user"])) ){/*Fixing here*/
+if((!isset($_SESSION["login_user"])) && (empty($_SESSION["login_user"])) ){
 
     $_SESSION["login_user"] = null;
 
